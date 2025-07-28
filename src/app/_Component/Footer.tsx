@@ -10,6 +10,7 @@ export default function Footer() {
         py: 2,
         textAlign: "center",
       }}
+      
     >
       <Typography variant="body2">© 2025 Ecomm-Easy. All rights reserved.</Typography>
     </Box>
