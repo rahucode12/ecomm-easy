@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google"; // ✅ Import here
 import NavigationBar from "./_Component/NavigationBar";
 import Footer from "./_Component/Footer";
 import AppProviders from "./_Component/AppProviders";
+import { Analytics } from '@vercel/analytics/next';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,7 +31,7 @@ export default function RootLayout({
         <AppProviders>
           <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
             <NavigationBar />
-            <main style={{ flex: 1 , overflowY: "auto"}}>{children}</main>
+            <main style={{ flex: 1, overflowY: "auto" }}>{children} <Analytics /></main>
             <Footer />
           </div>
         </AppProviders>
